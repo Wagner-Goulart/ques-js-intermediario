@@ -80,9 +80,10 @@ body {
 
 }
 
-.formulario .botao-enviar input {
+.formulario .botao-enviar .btn-enviar {
     background-color:#3CCC87 ;
     color: #ffff;
+    width:100%;
     height: 41px;
     border: none;
     border-radius: 5px;

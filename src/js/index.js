@@ -5,31 +5,19 @@ botaoEnviar.addEventListener('click', (e) =>{
     e.preventDefault()
 
     camposFormulario.forEach((input)=>{
-        const campo = input.value
+  
 
-        if(campo) {
-
-            validarCampo(input)
+        if(input.value) {
+            input.classList.add('valido')
+            input.nextElementSibling.classList.remove('mostrar')
+            
+        } else {
+            input.classList.remove('valido')
+            input.classList.add('erro')
+            input.nextElementSibling.classList.add('mostrar')
         }
-        
-        if(!campo) {
 
-            erroValidacao(input)
-        }
 
     })
 })
 
-function validarCampo(input) {
-    input.classList.add('valido')
-    input.nextElementSibling.classList.remove('mostrar')
-}
-
-function erroValidacao(input) {
-    if(input.classList.contains('valido')){
-        input.classList.remove('valido')
-    }
-
-    input.classList.add('erro')
-    input.nextElementSibling.classList.add('mostrar')
-}
